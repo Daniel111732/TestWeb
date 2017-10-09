@@ -1,5 +1,6 @@
 package com.example.danielgarciavargas.TestWeb;
 
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void connect(View view){
         String url = editTextURL.getText().toString();
+        WebReaderTask wrTask = new WebReaderTask();
+        wrTask.execute(url);
+    }
 
+    private class WebReaderTask extends AsyncTask<String,Void,String> {
+
+        @Override
+        protected String doInBackground(String... url) {
+            return WebReader.getURL(url[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            textViewResult.setText(s);
+        }
     }
 }
