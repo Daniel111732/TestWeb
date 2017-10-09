@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void connect(View view){
-        textViewResult.setText(WebReader.getURL(editTextURL.getText().toString()));
+        String url = editTextURL.getText().toString();
+
     }
 }
