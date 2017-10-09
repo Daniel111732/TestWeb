@@ -10,21 +10,20 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="connect"
         android:text="Button"
         tools:layout_editor_absoluteX="250dp"
         tools:layout_editor_absoluteY="367dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextURL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="174dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="38dp"
         android:ems="10"
         android:fontFamily="monospace"
         android:hint="/typeURL"
@@ -33,5 +32,14 @@
         android:singleLine="false"
         android:text="Type URL"
         android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/button"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
